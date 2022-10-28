@@ -1,6 +1,6 @@
 {
   "name": "@startertemp/nextjs-hardhat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "bin": "./bin/cli.js",
   "description": "A Starter Template for Next JS, with Hardhat(Solidity) Javascript backend.",
   "repository": {
@@ -28,17 +28,17 @@
   },
   "homepage": "https://github.com/startertemp/nextjs-hardhat#readme",
   "dependencies": {
-    "ethers": "^5.6.9",
-    "next": "12.2.2",
-    "next-seo": "^5.4.0",
+    "ethers": "^5.7.2",
+    "next": "^12.3.1",
+    "next-seo": "^5.11.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "web3modal": "^1.9.8",
-    "@openzeppelin/contracts": "^4.7.0"
+    "web3modal": "^1.9.9"
   },
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
-    "hardhat": "^2.10.1",
-    "dotenv": "^16.0.1"
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@openzeppelin/contracts": "^4.7.3",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.12.1"
   }
 }

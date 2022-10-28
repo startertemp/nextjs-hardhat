@@ -77,6 +77,6 @@ console.log(`cd frontend && npm run dev`);
 // Sharing Love
 // Starter Comment
 console.log(
-  "\x1b[34m%s\x1b[0m",
+  "\x1b[31m%s\x1b[0m",
   `----- Made by Love with Startertemp and LearnWeb3DAO`
 );
