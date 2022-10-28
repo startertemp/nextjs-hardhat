@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Solidity, Hardhat backend.",
+  "keywords": [
+    "contracts",
+    "hardhat",
+    "solidity"
+  ],
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "hardhat": "^2.12.1",
+    "@openzeppelin/contracts": "^4.7.0"
+  },
+  "dependencies": {}
+}
