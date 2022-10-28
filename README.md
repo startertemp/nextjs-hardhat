@@ -1,13 +1,12 @@
 [![GitHub issues](https://img.shields.io/github/issues/startertemp/nextjs-hardhat)](https://github.com/startertemp/nextjs-hardhat/issues)
 [![GitHub license](https://img.shields.io/github/license/startertemp/nextjs-hardhat)](https://github.com/startertemp/nextjs-hardhat/blob/master/LICENSE)
-![Discord](https://img.shields.io/discord/1004829842476376184)
-![GitHub forks](https://img.shields.io/github/forks/startertemp/nextjs-hardhat?style=social)
+![Discord](https://img.shields.io/discord/872804414107312158)
 --
 ![Twitter Follow](https://img.shields.io/twitter/follow/yanukadeneth99?style=social)
 ![GitHub followers](https://img.shields.io/github/followers/yanukadeneth99?style=social)
 --
 
-# Next JS, Solidity Typescript Starter Template
+# Next JS, Solidity JavaScript Starter Template
 
 This is a starter template which you can use containing multiple installed libraries for quick setup. This template uses `npm` for installation.
 
