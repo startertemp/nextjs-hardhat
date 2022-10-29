@@ -14,7 +14,7 @@ This is a starter template which you can use containing multiple installed libra
 
 ### Web3Modal
 
-You can install wagmi model by running the following command
+You can install Web3Modal by running the following command
 
 ```
 npx @startertemp/nextjs-hardhat my-app
@@ -26,7 +26,7 @@ npx @startertemp/nextjs-hardhat my-app
 
 ### Rainbowkit with Wagmi
 
-You can install Rainbowkit with Wagmi by add the following flag
+You can install Rainbowkit with Wagmi by adding the following flag with the installation
 
 ```
 npx @startertemp/nextjs-hardhat my-app rainbowkit
