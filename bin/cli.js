@@ -1,16 +1,14 @@
 #!/usr/bin/env node
 
-// TODO Change to a try catch model maybe to output per error
-
 //* Dependacy
 const { execSync } = require("child_process");
 const os = require("node:os");
 
 // Get Folder name
-const repoName = process.argv[2] || "my-app";
+const repoName = process.argv[2].toLowerCase() || "my-app";
 
 // Get Type of Installation
-const insType = process.argv[3] || "web3modal";
+const insType = process.argv[3].toLowerCase() || "web3modal";
 
 // Run command and pass true to return with error
 const runCommand = (command, error = true) => {
@@ -46,7 +44,7 @@ console.log("\x1b[34m%s\x1b[0m", `----- Detected Platform ${platform}`);
 if (!platform) process.exit(1);
 
 //* Install Rainbowkit
-if (insType.toLowerCase() == "rainbowkit") {
+if (insType == "rainbowkit") {
   console.log("\x1b[34m%s\x1b[0m", `----- Installing Rainbowkit with Wagmi`);
 
   // Windows Platform
@@ -71,7 +69,6 @@ if (insType.toLowerCase() == "rainbowkit") {
 
   // Linux/MacOs Platform
   else {
-    console.log("\x1b[34m%s\x1b[0m", `----- Installing Web3Modal`);
     // Changing Package Files
     const removeWagPackage = runCommand(
       `cd ${repoName}/frontend && rm -fv package.json`
@@ -92,6 +89,7 @@ if (insType.toLowerCase() == "rainbowkit") {
 }
 //* Install Web3Modal
 else {
+  console.log("\x1b[34m%s\x1b[0m", `----- Installing Web3Modal`);
   // Windows Platform
   if (platform == "win32") {
     // Removing Rainbowkit App and Package

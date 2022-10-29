@@ -12,6 +12,10 @@ This is a starter template which you can use containing multiple installed libra
 
 ## Installation
 
+### Web3Modal
+
+You can install wagmi model by running the following command
+
 ```
 npx @startertemp/nextjs-hardhat my-app
 ```
@@ -19,6 +23,19 @@ npx @startertemp/nextjs-hardhat my-app
 - `npx` stands for npm init
 - `@startertemp/nextjs-hardhat-ts` is the package name
 - `my-app` is the folder name
+
+### Rainbowkit with Wagmi
+
+You can install Rainbowkit with Wagmi by add the following flag
+
+```
+npx @startertemp/nextjs-hardhat my-app rainbowkit
+```
+
+- `npx` stands for npm init
+- `@startertemp/nextjs-hardhat-ts` is the package name
+- `my-app` is the folder name
+- `rainbowkit` is the flag sent to install rainbowkit and wagmi and change the `app.jsx`
 
 ## Get Started
 
@@ -37,6 +54,8 @@ This README was made for [LearnWeb3DAO](https://learnweb3.io) courses for ease s
 - [React JS](https://reactjs.org/docs/getting-started.html)
 - [Web3Modal](https://github.com/Web3Modal/web3modal)
 - [Ethers](https://docs.ethers.io/v5/getting-started/)
+- [Rainbowkit](https://www.rainbowkit.com/)
+- [Wagmi](https://wagmi.sh/)
 
 ### Back-end
 
