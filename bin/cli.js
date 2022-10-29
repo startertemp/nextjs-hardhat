@@ -5,10 +5,10 @@ const { execSync } = require("child_process");
 const os = require("node:os");
 
 // Get Folder name
-const repoName = process.argv[2].toLowerCase() || "my-app";
+const repoName = (process.argv[2] || "my-app").toLowerCase();
 
 // Get Type of Installation
-const insType = process.argv[3].toLowerCase() || "web3modal";
+const insType = (process.argv[3] || "web3modal").toLowerCase();
 
 // Run command and pass true to return with error
 const runCommand = (command, error = true) => {
