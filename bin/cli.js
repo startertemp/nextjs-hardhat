@@ -65,14 +65,15 @@ if (!installBDeps) process.exit(1);
 
 // Clearing out installation files and setting up README File
 console.log("\x1b[34m%s\x1b[0m", `----- Clearing out Installation Directories`);
-const clearBin = runCommand(`cd ${repoName} && rm -rf bin`);
-const clearPackage = runCommand(`cd ${repoName} && rm -fv package.json`);
-const clearGithub = runCommand(`cd ${repoName} && rm -rf .github`);
-const clearGit = runCommand(`cd ${repoName} && rm -rf .git`);
-const clearCOC = runCommand(`cd ${repoName} && rm -fv CODE_OF_CONDUCT.md`);
-const clearC = runCommand(`cd ${repoName} && rm -fv CONTRIBUTING.md`);
-const clearL = runCommand(`cd ${repoName} && rm -fv LICENSE`);
-const readmeFix = runCommand(`cd ${repoName} && mv "beautify.md" "README.md"`);
+//added secondary commands for failover situations
+const clearBin = runCommand(`cd ${repoName} && rm -rf bin`, `cd ${repoName} && rd /s /q bin`);
+const clearPackage = runCommand(`cd ${repoName} && rm -fv package.json`, `cd ${repoName} && del package.json`);
+const clearGithub = runCommand(`cd ${repoName} && rm -rf .github`, `cd ${repoName} && rd /s /q .github`);
+const clearGit = runCommand(`cd ${repoName} && rm -rf .git`, `cd ${repoName} && rd /s /q .git`);
+const clearCOC = runCommand(`cd ${repoName} && rm -fv CODE_OF_CONDUCT.md`, `cd ${repoName} && del CODE_OF_CONDUCT.md`);
+const clearC = runCommand(`cd ${repoName} && rm -fv CONTRIBUTING.md`, `cd ${repoName} && del CONTRIBUTING.md`);
+const clearL = runCommand(`cd ${repoName} && rm -fv LICENSE`, `cd ${repoName} && del LICENSE`);
+const readmeFix = runCommand(`cd ${repoName} && mv "beautify.md" "README.md"`, `cd ${repoName} && move "beautify.md" "README.md"`);
 if (
   !clearBin &&
   !clearPackage &&
