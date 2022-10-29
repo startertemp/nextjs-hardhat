@@ -6,10 +6,32 @@ const { execSync } = require("child_process");
 // Get Folder name
 const repoName = process.argv[2] || "my-app";
 
+//flag to switch the terminal when CMD is found
+let switchToCMD = false;
+
 // Run command and pass true to return with error
 const runCommand = (command, error = true) => {
+  let initialCommand = command;
+
+  if(switchToCMD && secondaryCommand !== undefined) initialCommand = secondaryCommand;
+
+
   try {
-    execSync(`${command}`, { stdio: "inherit" });
+    execSync(`${initialCommand}`, { stdio: "inherit" });
+    return true;
+  } catch (e) {
+    if (error) {
+      console.error("\x1b[31m%s\x1b[0m", `Failed to execute ${initialCommand} : ${e}`);
+    } if( secondaryCommand === undefined){
+      return false;
+    }
+    console.log("Trying secondary command");
+    switchToCMD = true;
+    // return false;
+  }
+
+  try {
+    execSync(`${secondaryCommand}`, { stdio: "inherit" });
   } catch (e) {
     if (error) {
       console.error("\x1b[31m%s\x1b[0m", `Failed to execute ${command} : ${e}`);
