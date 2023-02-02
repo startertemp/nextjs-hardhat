@@ -16,7 +16,7 @@ WALLET_PRIVATE_KEY="e17ubj82ybe......"
 
 */
 
-const config = {
+module.exports = {
   solidity: "0.8.9",
   defaultNetwork: "goerli",
   networks: {
@@ -32,5 +32,3 @@ const config = {
   //   },
   // },
 };
-
-export default config;
