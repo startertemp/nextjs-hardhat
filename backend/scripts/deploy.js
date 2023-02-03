@@ -10,28 +10,31 @@ ex : Asssume you have a string and a number to pass
 ` const lock = await Lock.deploy("hello", 5);`
 */
 
-async function main() {
-  //* Deployment Process
-  const Lock = await hre.ethers.getContractFactory("ContratName");
+//* Sample Deployment
+/*
+  const Lock = await hre.ethers.getContractFactory("ContractName");
   const lock = await Lock.deploy();
 
   await lock.deployed();
 
   console.log("Contract Deployed to : ", lock.address);
 
-  //* Un-comment this segment for the verification process
-  // console.log("Sleeping...");
-  // await sleep(50000);
+  console.log("Sleeping...");
+  await sleep(50000);
+  await hre.run("verify:verify", {
+    address: lock.address,
+    constructorArguments: [],
+  });
+*/
 
-  // await hre.run("verify:verify", {
-  //   address: lock.address,
-  //   constructorArguments: [],
-  // });
+async function main() {
+  // Write your deployment files here
 }
-//* Un-comment this segment for the verification process
-// function sleep(ms) {
-//   return new Promise((resolve) => setTimeout(resolve, ms));
-// }
+
+// Async Sleep function
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
 
 main().catch((error) => {
   console.error(error);

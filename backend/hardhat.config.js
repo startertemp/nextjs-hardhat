@@ -1,9 +1,8 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
 
+//* Default Template for Reference
 /*
-* Default Template for Reference 
-
 module.exports = {
   solidity: "0.8.9",
   defaultNetwork: "mumbai",
