@@ -94,10 +94,10 @@ else {
   if (platform == "win32") {
     // Removing Rainbowkit App and Package
     const removeWagPackage = runCommand(
-      `cd ${repoName}/frontend && del package-rain.json`
+      `cd ${repoName}/frontend && del packageRain.json`
     );
     const removeWagApp = runCommand(
-      `cd ${repoName}/frontend/pages && del _app-rain.jsx`
+      `cd ${repoName}/frontend/pages && del _app.jsx`
     );
     if (!removeWagApp && !removeWagPackage) process.exit(1);
   }
@@ -106,11 +106,11 @@ else {
   else {
     // Removing Rainbowkit App and Package
     const removeWagPackage = runCommand(
-      `cd ${repoName}/frontend && rm -fv package-rain.json`
+      `cd ${repoName}/frontend && rm -fv packageRain.json`
     );
     // Changing App File
     const removeWagApp = runCommand(
-      `cd ${repoName}/frontend/pages && rm -fv _app-rain.jsx`
+      `cd ${repoName}/frontend/pages && rm -fv _app.jsx`
     );
     if (!removeWagApp && !removeWagPackage) process.exit(1);
   }
